@@ -10,6 +10,3 @@ class Teacher < Person
     true
   end
 end
-
-tea = Person.new('22', 'Aksha')
-print tea

@@ -23,7 +23,3 @@ class Person
     false
   end
 end
-
-stu = Person.new('22', 'Aksha')
-
-print stu

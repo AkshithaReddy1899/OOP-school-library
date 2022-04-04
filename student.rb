@@ -10,7 +10,3 @@ class Student < Person
     "¯\(ツ)/¯"
   end
 end
-
-aksha = Person.new('22', 'Aksha')
-
-puts aksha
