@@ -37,5 +37,3 @@ class Person < Nameable
   end
 end
 
-per = Person.new(22, 'aksha')
-puts per
