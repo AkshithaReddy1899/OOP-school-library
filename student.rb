@@ -1,11 +1,11 @@
-require './person'
+require_relative 'person'
 
 class Student < Person
   attr_reader :classroom
 
-  def initialize(classroom, age, name = 'Unknown', parent_permission: true)
-    super(age, name, parent_permission)
+  def initialize(age, classroom, name = 'Unknown', parent_permission: true)
     @classroom = classroom
+    super(age, name, parent_permission: parent_permission)
   end
 
   def play_hooky
@@ -18,7 +18,6 @@ class Student < Person
   end
 end
 
-stu = Student.new('QW', 22, 'aksha')
+stu = Student.new(22, 'T', 'aksha')
 
-print 'OM'
-print stu
+puts stu
