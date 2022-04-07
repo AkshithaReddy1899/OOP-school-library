@@ -12,7 +12,3 @@ class Classroom
     student.classroom = self
   end
 end
-
-classr = Classroom.new('a')
-
-puts classr.add_students('aksha')
