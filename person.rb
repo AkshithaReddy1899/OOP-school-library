@@ -2,10 +2,10 @@ require './nameable'
 require './rental'
 
 class Person < Nameable
-  attr_accessor :age, :name, :rentals
+  attr_accessor :age, :name, :rentals, :parent_permission
   attr_reader :id
 
-  def initialize(age, name = 'Unknown', parent_permission: true)
+  def initialize(age, name, parent_permission)
     super()
     @id = @id = Random.rand(1...1000)
     @name = name
