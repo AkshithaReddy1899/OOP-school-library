@@ -10,6 +10,18 @@ class App
     @rentals = []
   end
 
+	def list_options
+		puts 'Welcome '
+		until menu
+			user_input = input
+			if user_input == '7'
+				puts 'Thank you for using my school library!'
+				break
+			end
+			options user_input
+		end
+	end
+
   def input
     gets.chomp
   end
