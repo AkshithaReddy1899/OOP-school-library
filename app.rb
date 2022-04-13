@@ -10,17 +10,17 @@ class App
     @rentals = []
   end
 
-	def list_options
-		puts 'Welcome '
-		until menu
-			user_input = input
-			if user_input == '7'
-				puts 'Thank you for using my school library!'
-				break
-			end
-			options user_input
-		end
-	end
+  def list_options
+    puts 'Welcome to School Library App!'
+    until menu
+      user_input = input
+      if user_input == '7'
+        puts 'Thank you for using my school library!'
+        break
+      end
+      options user_input
+    end
+  end
 
   def input
     gets.chomp
@@ -60,12 +60,15 @@ class App
     end
   end
 
+  # rubocop:disable Metrics/MethodLength
   def create_student
     puts 'Create a student'
     print 'Age: '
     age = input.to_i
     print 'Name: '
     name = input
+    print 'Classroom: '
+    classroom = input
     print 'Has parent permission? [y/n]: '
     permission = input
     parent_permission = false
@@ -74,13 +77,14 @@ class App
       when 'y' then parent_permission = true
       when 'n' then parent_permission = false
       end
-      @persons.push(Student.new(age, name, 'Unknown', parent_permission))
+      @persons.push(Student.new(age, classroom, name, parent_permission))
       puts 'New student added!'
     else
       puts 'Please pick a value "Y" or "N"'
       create_student
     end
   end
+  # rubocop:enable Metrics/MethodLength
 
   def create_teacher
     puts 'Create teacher'

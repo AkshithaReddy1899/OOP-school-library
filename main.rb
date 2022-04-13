@@ -6,7 +6,6 @@ def main
 end
 
 def menu
-  puts 'Welcome to School Library App!'
   puts ''
   puts 'Please choose an option by entering a number:'
   puts '1 - List all books'
@@ -15,6 +14,7 @@ def menu
   puts '4 - Create a book'
   puts '5 - Create a rental'
   puts '6 - List all rentals for a given person id'
+  puts '7 - Exit'
 end
 
 def options(num)
